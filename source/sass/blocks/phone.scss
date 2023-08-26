@@ -1,0 +1,48 @@
+.phone {
+  max-width: 142px;
+
+  a {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: inherit;
+
+    outline: none;
+
+    transition: color $trans-default;
+
+    @include hover {
+      color: $color-resolution-blue;
+    }
+
+    @include focus {
+      color: $color-resolution-blue;
+
+      &:active {
+        color: $color-navy-blue;
+      }
+    }
+
+    @include active {
+      color: $color-navy-blue;
+    }
+
+    @include disabled {
+      opacity: 0.15;
+
+      pointer-events: none;
+    }
+
+    @include vp-1199 {
+      z-index: 1;
+
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}

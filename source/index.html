@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./favicon/apple.png">
-    <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="preload" href="./fonts/montserrat-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/montserrat-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <meta name="description" content="Путешействуй вместе с LiveTour: лучшие виды, лучшие туры, лучшие цены">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./favicon/apple.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preload" href="./fonts/montserrat-light.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/montserrat-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+    <meta name="description" content="Путешействуй вместе с LiveTour: лучшие виды, лучшие туры, лучшие цены" />
     <title>LiveTour</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="header__container container">
+          <div class="header__logo logo">
+            <a href="#" aria-label="Логотип сайта LiveTour." aria-current="page" data-logo="logo">
+              <svg width="205" height="62" aria-hidden="true" focusable="false">
+                <use href="./img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </div>
+          <button class="navigation__toggle-button toggle-button" type="button" aria-label="Открыть меню.">
+            <svg class="toggle-button__opened" width="26" height="26" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#menu"></use>
+            </svg>
+            <svg class="toggle-button__closed" width="22" height="22" aria-hidden="true" focusable="false">
+              <use href="./img/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <nav class="header__navigation navigation">
+            <ul>
+              <li><a href="#tours">Туры</a></li>
+              <li><a href="#training">Обучение</a></li>
+              <li><a href="#about-us">О&nbsp;нас</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#photos">Фотографии</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__user phone">
+            <a href="tel:+78007253232" data-phone="phone">8&nbsp;800&nbsp;725&nbsp;32&nbsp;32</a>
+          </div>
+        </div>
       </header>
 
       <main>
-
-        <section class="intro">
-          <div class="container">
-          </div>
+        <section class="">
+          <div class="container"></div>
         </section>
-
       </main>
 
       <footer>

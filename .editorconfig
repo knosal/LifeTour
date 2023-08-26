@@ -20,3 +20,8 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[variables.scss]
+# Отключаем форматирование для файла variables.scss
+indent_style = unset
+

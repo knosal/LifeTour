@@ -1,9 +1,10 @@
 {
   "exclude": [
     ".git/**",
-    "node_modules/**"
+    "node_modules/**",
+    "blocks/variables.scss",
+    "js/**"
   ],
-
   "always-semicolon": true,
   "block-indent": "  ",
   "color-case": "lower",
@@ -24,10 +25,14 @@
   "space-before-selector-delimiter": "",
   "space-after-selector-delimiter": "\n",
   "space-before-closing-brace": "\n",
-  "strip-spaces": true,
-  "tab-size": 2,
+  "strip-spaces": false,
+  "indent": " ",
   "unitless-zero": true,
   "vendor-prefix-align": true,
+  "csscomb.ignoreFilesOnSave": [
+    "variables.scss",
+    "js/**"
+  ],
   "sort-order": [
     [
       "content",
@@ -437,6 +442,9 @@
       "-webkit-clip-path",
       "clip-path",
       "zoom"
+    ],
+    [
+      "include"
     ]
   ]
 }

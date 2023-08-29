@@ -1,5 +1,5 @@
 .navigation {
-  z-index: 2;
+  z-index: 3;
 
   @include vp-1199 {
     position: absolute;
@@ -117,10 +117,26 @@
   display: none;
 
   @include vp-1199 {
+    z-index: 4;
+
+    display: block;
+
     transform: translate(-9px, -4px);
 
     &.is-opened {
+      display: block;
+
       transform: translate(-11px, 0);
     }
+  }
+
+  @include vp-767 {
+    align-self: flex-start;
+    width: fit-content;
+
+    transform: translate(-9px, -9px);
+
+    grid-area: toggle;
+    grid-row: span 2;
   }
 }

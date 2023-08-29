@@ -4,9 +4,6 @@
   transition: color $trans-default;
 
   @include vp-1199 {
-    z-index: 3;
-
-    order: 3;
     width: min-content;
 
     color: inherit;
@@ -24,23 +21,11 @@
     }
   }
 
-  &:hover,
-  &:focus,
-  &:focus-within {
-    color: $color-resolution-blue;
-  }
-
-  &:active {
-    color: $color-navy-blue;
-  }
-
-  &:disabled {
-    opacity: 0.15;
-
-    pointer-events: none;
-  }
+  @include link-states;
 
   a {
+    display: inline-block;
+
     color: inherit;
   }
 }

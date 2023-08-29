@@ -1,0 +1,302 @@
+.hero {
+  margin-top: -142px;
+
+  color: $color-default-white;
+
+  background-color: $color-polo-blue;
+
+  @include vp-1199 {
+    margin-top: -104px;
+  }
+
+  @include vp-767 {
+    margin-top: -242px;
+  }
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.hero__item {
+  display: flex;
+  height: auto;
+}
+
+.hero__content {
+  display: grid;
+  align-content: flex-start;
+  padding-top: 142px;
+  padding-bottom: 80px;
+
+  grid-template-columns: 1fr auto;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 104px;
+    padding-bottom: 169px;
+  }
+
+  @include vp-767 {
+    padding-top: 86px;
+    padding-bottom: 152px;
+  }
+}
+
+.hero__background {
+  position: absolute;
+  z-index: -2;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: $gradient-overlay-0;
+
+    inset: 0;
+  }
+
+  img {
+    width: 100%;
+
+    object-fit: fill;
+  }
+}
+
+.hero__title {
+  z-index: 1;
+
+  max-width: 921px;
+  margin: 40px -71px 37px 0;
+
+  grid-area: 1 / 1 / 2 / 2;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 70px 0 27px;
+  }
+
+  @include vp-767 {
+    margin: 54px 0 21px;
+  }
+
+  h2 {
+    margin: 0 0 23px;
+
+    font-weight: 800;
+    font-size: 77px;
+    line-height: 77px;
+
+    @include vp-1199 {
+      margin: 0 0 13px;
+
+      font-size: 56px;
+      line-height: 56px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  p {
+    max-width: 465px;
+    margin-top: 0;
+
+    font-size: 17px;
+    line-height: 24px;
+
+    @include vp-1199 {
+      max-width: 68%;
+
+      font-size: 17px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      max-width: 98%;
+
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+.hero__button {
+  margin: 0 0 150px;
+
+  grid-area: 2 / 1 / 3 / 2;
+
+  @include vp-1199 {
+    margin: 0 0 50px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+
+  justify-self: start;
+}
+
+.hero__info-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 10px;
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.hero__details-item {
+  position: relative;
+
+  padding: 13px 20px 13px 39px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  border: 1px solid rgba($color-default-white, 0.5);
+
+  @include vp-1199 {
+    display: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 19px;
+
+    margin: auto;
+  }
+}
+
+
+.hero__video,
+.hero__photo,
+.hero__audio {
+  align-self: start;
+
+  grid-area: 1 / 2 / 4 / 3;
+
+  @include vp-1199 {
+    align-self: stretch;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  justify-self: end;
+}
+
+.hero__video {
+  margin: 159px 0 0;
+
+  @include vp-1199 {
+    margin: 0 calc(17% + 3px);
+  }
+}
+
+.hero__photo {
+  margin: 60px 0 0;
+
+  @include vp-1199 {
+    margin: -16px calc(17% + 3px) 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.hero__audio {
+  margin: 159px 0 0;
+
+  @include vp-1199 {
+    align-self: center;
+    margin: 19px 0 0;
+  }
+}
+
+.hero__slider {
+  position: relative;
+}
+
+.hero__slider .hero__pagination {
+  position: absolute;
+  right: 0;
+  bottom: 97px;
+  z-index: 1;
+
+  display: flex;
+  justify-content: end;
+
+  gap: 0 15px;
+
+  @include vp-1199 {
+    bottom: 90px;
+
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    bottom: 40px;
+
+    gap: 0 12px;
+  }
+}
+
+.hero__slider .hero__pagination-button {
+  width: 10px;
+  height: 10px;
+  margin: swiper-pagination-bullet-horizontal-gap;
+
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  outline: none;
+  opacity: 1;
+
+  transition: all $trans-default;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    opacity: 0.4;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+}
+
+.hero__slider .swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}

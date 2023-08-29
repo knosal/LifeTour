@@ -11,27 +11,7 @@
 
     transition: color $trans-default;
 
-    @include hover {
-      color: $color-resolution-blue;
-    }
-
-    @include focus {
-      color: $color-resolution-blue;
-
-      &:active {
-        color: $color-navy-blue;
-      }
-    }
-
-    @include active {
-      color: $color-navy-blue;
-    }
-
-    @include disabled {
-      opacity: 0.15;
-
-      pointer-events: none;
-    }
+    @include link-states;
 
     @include vp-1199 {
       z-index: 1;

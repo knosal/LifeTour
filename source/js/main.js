@@ -1,8 +1,10 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { Form } from './modules/form-validate/form';
-import { createScript } from './modules/dev';
-import { initButtonMenu } from './modules/menuToggle';
-
+import { createScript } from './modules/pixelperfect/dev';
+import { initButtonMenu } from './modules/header/menuToggle';
+import { initVideoPlayer } from './modules/hero/videoPlayer';
+import { initAudioPlayer } from './modules/hero/audioPlayer';
+import { initSwiperHero } from './modules/hero/heroSlider';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     // createScript();
     initButtonMenu();
+    initVideoPlayer();
+    initAudioPlayer();
+    initSwiperHero();
     const form = new Form();
     window.form = form;
     form.init();

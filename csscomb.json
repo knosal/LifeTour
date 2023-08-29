@@ -2,7 +2,7 @@
   "exclude": [
     ".git/**",
     "node_modules/**",
-    "blocks/variables.scss",
+    "sass/variables.scss",
     "js/**"
   ],
   "always-semicolon": true,
@@ -30,7 +30,7 @@
   "unitless-zero": true,
   "vendor-prefix-align": true,
   "csscomb.ignoreFilesOnSave": [
-    "variables.scss",
+    "**/variables.scss",
     "js/**"
   ],
   "sort-order": [

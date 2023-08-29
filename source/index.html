@@ -53,9 +53,187 @@
         </div>
       </header>
 
-      <main>
+      <main class="main">
         <section class="hero">
-          <div class="hero__container container"></div>
+          <h1 class="visually-hidden">Туристическое агентство: LifeTour.</h1>
+          <div class="hero__slider swiper-hero swiper">
+            <ul class="hero__list swiper-wrapper">
+              <li class="hero__item swiper-slide">
+                <div class="hero__content container">
+                  <div class="hero__title">
+                    <h2>Захватывающие вершины Кавказа</h2>
+                    <p>В&nbsp;сопровождении опытных гидов вы&nbsp;пройдете через потрясающие ландшафты и&nbsp;совершите восход на&nbsp;вершину горы Чегет.</p>
+                  </div>
+                  <a class="hero__button button" href="#!">Смотреть тур</a>
+                  <ul class="hero__info-list">
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#moon"></use>
+                      </svg>
+                      <span>6&nbsp;дней/5 ночей</span>
+                    </li>
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#level"></use>
+                      </svg>
+                      <span>Высокая сложность</span>
+                    </li>
+                  </ul>
+
+                  <div class="hero__video video">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/first-slide/poster-tablet@1x.webp, ./img/hero/first-slide/poster-tablet@2x.webp 2x" width="442" height="300">
+                      <source type="image/webp" srcset="./img/hero/first-slide/poster-desktop@1x.webp, ./img/hero/first-slide/poster-desktop@2x.webp 2x" width="482" height="317">
+                      <source media="(max-width: 1199px)" srcset="./img/hero/first-slide/poster-tablet@1x.jpg, ./img/hero/first-slide/poster-tablet@2x.jpg 2x" width="442" height="300">
+                      <img src="./img/hero/first-slide/poster-desktop@1x.jpg" srcset="./img/hero/first-slide/poster-desktop@2x.jpg 2x" width="482" height="317" alt="Постер: человек в синей курткее, стоящий на горе.">
+                    </picture>
+                    <button class="video__button" type="button" aria-label="Воспроизвести видео." data-src="9TZXsZItgdw">
+                      <svg width="12" height="22" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#play-video"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <picture class="hero__background">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/hero/first-slide/background-mobile@1x.webp, ./img/hero/first-slide/background-mobile@2x.webp 2x" width="320" height="568">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/first-slide/background-tablet@1x.webp, ./img/hero/first-slide/background-tablet@2x.webp 2x" width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/first-slide/background-desktop@1x.webp, ./img/hero/first-slide/background-desktop@2x.webp 2x" width="1440" height="800">
+                  <source media="(max-width: 767px)" srcset="./img/hero/first-slide/background-mobile@1x.jpg, ./img/hero/first-slide/background-mobile@2x.jpg 2x" width="320" height="568">
+                  <source media="(max-width: 1199px)" srcset="./img/hero/first-slide/background-tablet@1x.jpg, ./img/hero/first-slide/background-tablet@2x.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/first-slide/background-desktop@1x.jpg" srcset="./img/hero/first-slide/background-desktop@2x.jpg 2x" width="1440" height="800" alt="Фон: гора с облаками в небе.">
+                </picture>
+              </li>
+              <li class="hero__item swiper-slide">
+                <div class="hero__content container">
+                  <div class="hero__title">
+                    <h2>Невероятная природа Камчатки</h2>
+                    <p>Незабываемое приключение, во&nbsp;время которого вы&nbsp;отправитесь в&nbsp;путешествие по&nbsp;одному из&nbsp;самых нетронутых уголков дикой природы в&nbsp;мире.</p>
+                  </div>
+                  <a class="hero__button button" href="#!" tabindex="0">Смотреть тур</a>
+                  <ul class="hero__info-list">
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#moon"></use>
+                      </svg>
+                      <span>9&nbsp;дней/10 ночей</span>
+                    </li>
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#level"></use>
+                      </svg>
+                      <span>Средняя сложность</span>
+                    </li>
+                  </ul>
+                  <div class="hero__photo">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/second-slide/cards-tablet@1x.webp, ./img/hero/second-slide/cards-tablet@2x.webp 2x" width="442" height="365">
+                      <source type="image/webp" srcset="./img/hero/second-slide/cards-desktop@1x.webp, ./img/hero/second-slide/cards-desktop@2x.webp 2x" width="410" height="459">
+                      <source media="(max-width: 1199px)" srcset="./img/hero/second-slide/cards-tablet@1x.png, ./img/hero/second-slide/cards-tablet@2x.png 2x" width="442" height="365">
+                      <img src="./img/hero/second-slide/cards-desktop@1x.png" srcset="./img/hero/second-slide/cards-desktop@2x.png 2x" width="410" height="459" alt="Коллаж из двух фотографий." loading="lazy">
+                    </picture>
+                  </div>
+                </div>
+                <picture class="hero__background">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/hero/second-slide/background-mobile@1x.webp, ./img/hero/second-slide/background-mobile@2x.webp 2x" width="320" height="568">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/second-slide/background-tablet@1x.webp, ./img/hero/second-slide/background-tablet@2x.webp 2x" width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/second-slide/background-desktop@1x.webp, ./img/hero/second-slide/background-desktop@2x.webp 2x" width="1440" height="800">
+                  <source media="(max-width: 767px)" srcset="./img/hero/second-slide/background-mobile@1x.jpg, ./img/hero/second-slide/background-mobile@2x.jpg 2x" width="320" height="568">
+                  <source media="(max-width: 1199px)" srcset="./img/hero/second-slide/background-tablet@1x.jpg, ./img/hero/second-slide/background-tablet@2x.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/second-slide/background-desktop@1x.jpg" srcset="./img/hero/second-slide/background-desktop@2x.jpg 2x" width="1440" height="800" alt="Фон: горный хребет с облаками." loading="lazy">
+                </picture>
+              </li>
+              <li class="hero__item swiper-slide">
+                <div class="hero__content container">
+                  <div class="hero__title">
+                    <h2>Магические пейзажи Алтайского Края</h2>
+                    <p>Алтайский трекинг-тур&nbsp;&mdash; это&nbsp;захватывающее приключение с&nbsp;посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
+                  </div>
+                  <a class="hero__button button" href="#!" tabindex="0">Смотреть тур</a>
+                  <ul class="hero__info-list">
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#moon"></use>
+                      </svg>
+                      <span>8&nbsp;дней/7 ночей</span>
+                    </li>
+                    <li class="hero__details-item">
+                      <svg width="12" height="12" aria-hidden="true" focusable="false">
+                        <use href="./img/sprite.svg#level"></use>
+                      </svg>
+                      <span>Легкая сложность</span>
+                    </li>
+                  </ul>
+                  <div class="hero__audio audio">
+                    <div class="audio__top">
+                      <div class="audio__track">
+                        <p class="audio__name">Алтай</p>
+                        <p class="audio__artists">Lifetour</p>
+                      </div>
+                      <div class="audio__actions">
+                        <button class="audio__button" type="button" aria-label="Поставить лайк.">
+                          <svg width="17" height="17" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#heart"></use>
+                          </svg>
+                        </button>
+                        <button class="audio__button" type="button" aria-label="Поделиться.">
+                          <svg width="17" height="17" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#share"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="audio__slider">
+                      <span class="audio__progress-bar " style="width: 56.5%;">
+                        <button class="audio__point" type="button" aria-label=""></button>
+                      </span>
+                    </div>
+                    <div class="audio__metadata">
+                      <span class="audio__passed">2:30</span>
+                      <span class="audio__duration">4:16</span>
+                    </div>
+                    <div class="audio__player-buttons">
+                      <button class="audio__button" type="button" aria-label="Перемешать и воспроизвести.">
+                        <svg width="25" height="25" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#shuffle"></use>
+                        </svg>
+                      </button>
+                      <div class="audio__controls">
+                        <button class="audio__button" type="button" aria-label="Предыдущая аудиозапись.">
+                          <svg width="22" height="22" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#prev"></use>
+                          </svg>
+                        </button>
+                        <button class="audio__button audio__play" type="button" aria-label="Воспроизвести." data-src="https://music.yandex.ru/iframe/#album/25474374">
+                          <svg width="47" height="47" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#play-audio"></use>
+                          </svg>
+                        </button>
+                        <button class="audio__button" type="button" aria-label="Следующая аудиозапись.">
+                          <svg width="22" height="22" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#next"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <button class="audio__button" type="button" aria-label="Повторять.">
+                        <svg width="25" height="25" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#repeat"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <picture class="hero__background">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/hero/third-slide/background-mobile@1x.webp, ./img/hero/third-slide/background-mobile@2x.webp 2x" width="320" height="568">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/third-slide/background-tablet@1x.webp, ./img/hero/third-slide/background-tablet@2x.webp 2x" width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/third-slide/background-desktop@1x.webp, ./img/hero/third-slide/background-desktop@2x.webp 2x" width="1440" height="800">
+                  <source media="(max-width: 767px)" srcset="./img/hero/third-slide/background-mobile@1x.jpg, ./img/hero/third-slide/background-mobile@2x.jpg 2x" width="320" height="568">
+                  <source media="(max-width: 1199px)" srcset="./img/hero/third-slide/background-tablet@1x.jpg, ./img/hero/third-slide/background-tablet@2x.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/third-slide/background-desktop@1x.jpg" srcset="./img/hero/third-slide/background-desktop@2x.jpg 2x" width="1440" height="800" alt="Фон: река, протекающая через долину." loading="lazy">
+                </picture>
+              </li>
+            </ul>
+            <div class="hero__pagination container"></div>
+          </div>
         </section>
 
         <section class="tours">
@@ -66,7 +244,7 @@
           <div class="training__container container"></div>
         </section>
 
-        <section class="about">
+        <section class="about-us">
           <div class="about__container container"></div>
         </section>
 
@@ -92,7 +270,57 @@
       </main>
 
       <footer class="footer">
-        <div class="footer__container container"></div>
+        <div class="footer__container container">
+          <div class="footer__top">
+            <div class="footer__logo logo">
+              <a href="#" aria-label="Логотип сайта LiveTour." aria-current="page" data-logo="logo">
+                <svg width="205" height="62" aria-hidden="true" focusable="false">
+                  <use href="./img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
+            <nav class="footer__menu menu">
+              <ul aria-label="Меню навигации по сайту.">
+                <li><a href="#tours">Туры</a></li>
+                <li><a href="#training">Обучение</a></li>
+                <li><a href="#about-us">О&nbsp;нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#photos">Фотографии</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="footer__user phone">
+              <a href="tel:+78007253232" data-phone="phone">8&nbsp;800&nbsp;725&nbsp;32&nbsp;32</a>
+            </div>
+          </div>
+          <section class="footer__social">
+            <h2 class="visually-hidden">Социальные сети.</h2>
+            <ul aria-label="Социальные сети.">
+              <li>
+                <a href="#!" target="_blank" aria-label="ВКонтакте.">
+                  <svg width="16" height="9" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" target="_blank" aria-label="Одноклассники.">
+                  <svg width="9" height="16" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#!" target="_blank" aria-label="Reddit.">
+                  <svg width="14" height="15" aria-hidden="true" focusable="false">
+                    <use href="./img/sprite.svg#reddit"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <a class="footer__strictures" href="#!">Политика конфиденциальности</a>
+        </div>
       </footer>
     </div>
 

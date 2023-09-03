@@ -3,12 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 710px;
-    margin: 1px 64px 0 0;
+    margin: 1px 63px 0 0;
     padding: 0;
 
     list-style-type: none;
 
-    gap: 5px 23px;
+    gap: 5px 20px;
 
     @include vp-1199 {
       margin: 0 1px 6px 0;

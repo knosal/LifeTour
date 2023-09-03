@@ -70,7 +70,7 @@
 
     @include vp-1199 {
       max-width: 50%;
-      margin: 0 1px 29px 0;
+      margin: 0 1px 31px 0;
     }
 
     @include vp-767 {
@@ -109,15 +109,20 @@
 
       gap: 7px 0;
     }
+
+    @include vp-767 {
+      gap: 9px 0;
+    }
   }
 }
 
 .feedback__button {
   width: 238px;
+  letter-spacing: 1px;
 
   @include vp-1199 {
     width: 100%;
-    margin: 8px 0 0;
+    margin: 10px 0 0;
   }
 
   @include vp-767 {

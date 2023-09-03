@@ -26,7 +26,7 @@
 
   @include vp-767 {
     padding-top: 36px;
-    padding-bottom: 34px;
+    padding-bottom: 0;
   }
 }
 
@@ -103,6 +103,7 @@
     flex-direction: column;
     max-width: 100%;
     padding: 20px;
+    padding-bottom: 18px;
 
     gap: 19px 0;
 

@@ -14,7 +14,7 @@
     }
 
     @include vp-1199 {
-      bottom: 99px;
+      bottom: 77px;
 
       &--right {
         display: none;
@@ -76,6 +76,14 @@
 
 .about-us__body {
   margin-top: 55px;
+
+  @include vp-1199 {
+    margin-top: 35px;
+  }
+
+  @include vp-767 {
+    margin-top: 29px;
+  }
 
   h3 {
     margin: 0 0 16px;

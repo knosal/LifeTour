@@ -14,7 +14,6 @@ import { initAllSliders } from './modules/initSwiperSlider';
 import { addAdvantagesSlider } from './modules/advantagresSlider';
 import { initMap } from './modules/map';
 import { createScript } from './modules/pixelperfect/dev';
-import './utils/scroll-lock';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

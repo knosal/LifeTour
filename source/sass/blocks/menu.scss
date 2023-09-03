@@ -11,9 +11,9 @@
     gap: 5px 20px;
 
     @include vp-1199 {
-      margin: 0 1px 6px 0;
+      margin: 0 0 10px;
 
-      gap: 5px 11px;
+      gap: 5px 9px;
     }
 
     @include vp-767 {
@@ -23,13 +23,13 @@
 
       column-count: 2;
 
-      gap: 0 20px;
+      gap: 0 50px;
     }
   }
 
   li {
     @include vp-767 {
-      margin: 0 0 5px;
+      margin: 0 0 2px;
     }
   }
 

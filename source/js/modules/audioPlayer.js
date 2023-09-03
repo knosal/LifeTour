@@ -6,7 +6,7 @@ const createAudio = () => {
   const audio = document.createElement('iframe');
 
   audio.setAttribute('src', 'https://music.yandex.ru/iframe/#track/112912322/25474374');
-  audio.setAttribute('title', 'Yandex audioplayer');
+  audio.setAttribute('title', 'Yandex audio player');
   audio.setAttribute('frameborder', '0');
   audio.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
   audio.setAttribute('allowfullscreen', '');

@@ -1,10 +1,20 @@
+// eslint-disable-next-line no-new
+
+// htmlonelove
 import { iosVhFix } from './utils/ios-vh-fix';
-import { Form } from './modules/form-validate/form';
+import { Form } from './utils/form-validate/form';
+import './utils/scroll-lock';
+
+// solutions
+import { initButtonMenu } from './modules/menuToggle';
+import { initVideoPlayer } from './modules/videoPlayer';
+import { initAudioPlayer } from './modules/audioPlayer';
+import { initAllSliders } from './modules/initSwiperSlider';
+// import { isSlider } from './modules/checkScreenRes';
+import { addAdvantagesSlider } from './modules/advantagresSlider';
+import { initMap } from './modules/map';
 import { createScript } from './modules/pixelperfect/dev';
-import { initButtonMenu } from './modules/header/menuToggle';
-import { initVideoPlayer } from './modules/hero/videoPlayer';
-import { initAudioPlayer } from './modules/hero/audioPlayer';
-import { initSwiperHero } from './modules/hero/heroSlider';
+import './utils/scroll-lock';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,17 +30,20 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    // createScript();
-    initButtonMenu();
-    initVideoPlayer();
-    initAudioPlayer();
-    initSwiperHero();
     const form = new Form();
     window.form = form;
     form.init();
+
+    createScript();
+    initButtonMenu();
+    initVideoPlayer();
+    initAudioPlayer();
+    initAllSliders();
+    addAdvantagesSlider();
+    initMap();
   });
 });
-
+/*
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
@@ -55,3 +68,4 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+*/

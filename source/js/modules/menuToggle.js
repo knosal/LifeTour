@@ -2,7 +2,7 @@ const initButtonMenu = () => {
   const isOpened = 'is-opened';
   const header = document.querySelector('.header');
   const container = header.querySelector('.header__container');
-  const toggleBtn = header.querySelector('.toggle-button');
+  const toggleBtn = header.querySelector('.button-toggle');
   const nav = header.querySelector('.navigation');
   const navLink = header.querySelector('.navigation a');
 
@@ -18,6 +18,7 @@ const initButtonMenu = () => {
 
     document.addEventListener('keydown', onModalEscKeydown);
     nav.addEventListener('click', onLinkClick);
+    window.scrollLock.disableScrolling();
   };
 
   const closeMenu = () => {
@@ -27,6 +28,7 @@ const initButtonMenu = () => {
 
     document.removeEventListener('keydown', onModalEscKeydown);
     nav.removeEventListener('click', onLinkClick);
+    window.scrollLock.enableScrolling();
   };
 
   toggleBtn.addEventListener('click', clickActionToggle);

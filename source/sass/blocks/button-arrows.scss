@@ -1,0 +1,23 @@
+.button-arrows {
+  display: flex;
+
+  gap: 0 4px;
+}
+
+.button-arrow {
+  position: relative;
+
+  display: block;
+  width: 37px;
+  height: 35px;
+
+  @include button-arrow-states;
+
+  svg {
+    position: absolute;
+
+    margin: auto;
+
+    inset: 0;
+  }
+}

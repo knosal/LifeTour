@@ -1,0 +1,55 @@
+.button-toggle {
+  display: none;
+
+  color: inherit;
+
+  background-color: $color-transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: color $trans-default;
+
+  @include vp-1199 {
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 26px;
+    min-height: 26px;
+    padding: 9px;
+
+    color: $color-default-white;
+
+    @include link-states;
+
+    &.is-opened {
+      padding: 11px;
+    }
+  }
+
+  &.is-opened {
+    .button-toggle__opened {
+      display: none;
+    }
+
+    .button-toggle__closed {
+      display: inline;
+
+      color: $color-default-elephant;
+
+      opacity: 1;
+
+      @include link-states;
+    }
+  }
+
+  .button-toggle__closed {
+    display: none;
+
+    opacity: 0;
+
+    transition: opacity $trans-ease-in;
+  }
+}

@@ -2,6 +2,7 @@
   z-index: 3;
 
   @include vp-1199 {
+    display: none;
     position: absolute;
     top: -200vh;
     right: 0;
@@ -14,6 +15,7 @@
     transition: top $trans-ease-in-out;
 
     &.is-opened {
+      display: block;
       top: 0;
     }
   }
@@ -113,7 +115,7 @@
   }
 }
 
-.navigation__toggle-button {
+.navigation__button-toggle {
   display: none;
 
   @include vp-1199 {

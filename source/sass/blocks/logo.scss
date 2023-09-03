@@ -3,6 +3,14 @@
 
   transition: color $trans-default;
 
+  @include link-states;
+
+  a {
+    display: inline-block;
+
+    color: inherit;
+  }
+
   @include vp-1199 {
     width: min-content;
 
@@ -19,13 +27,5 @@
       width: 112px;
       height: 34px;
     }
-  }
-
-  @include link-states;
-
-  a {
-    display: inline-block;
-
-    color: inherit;
   }
 }

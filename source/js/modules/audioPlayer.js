@@ -1,28 +1,43 @@
-const root = document.querySelector('.hero__audio');
-const cover = root.querySelector('picture');
-const button = root.querySelector('.audio__play');
+const container = document.querySelector('.audio');
+const buttonPlay = container.querySelector('[data-name="audio-play"]');
+
+const FrameSettings = {
+  src: 'https://music.yandex.ru/iframe/#track/112912322/25474374',
+  title: 'YouTube audio player',
+  frameborder: 0,
+  allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
+  width: 340,
+  height: 220,
+  style: 'border:none;width:340px;height:220px;',
+  allowfullscreen: '',
+};
+
+const hideContent = () => {
+  const content = container.querySelector('.audio__wrapper');
+  if (content) {
+    content.style.display = 'none';
+  }
+};
 
 const createAudio = () => {
   const audio = document.createElement('iframe');
-
-  audio.setAttribute('src', 'https://music.yandex.ru/iframe/#track/112912322/25474374');
-  audio.setAttribute('title', 'Yandex audio player');
-  audio.setAttribute('frameborder', '0');
-  audio.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-  audio.setAttribute('allowfullscreen', '');
-  audio.classList.add('.hero__audioplayer');
-  root.append(audio);
+  Object.entries(FrameSettings).forEach(([key, value]) => {
+    audio.setAttribute(key, value);
+  });
+  container.classList.add('is-active');
+  container.append(audio);
 };
 
 const initAudioPlayer = () => {
-  if (root && cover && button) {
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      cover.style.display = 'none';
-      button.style.display = 'none';
-      createAudio();
-    });
+  if (!container || !buttonPlay) {
+    return; // Не продолжаем, если нет элементов
   }
+
+  buttonPlay.addEventListener('click', (event) => {
+    event.preventDefault();
+    hideContent();
+    createAudio();
+  });
 };
 
 export { initAudioPlayer };

@@ -1,4 +1,5 @@
 .audio {
+  position: relative;
   width: 340px;
   height: auto;
   padding: 39px 38px 38px;
@@ -8,8 +9,11 @@
   background-color: rgba($color-ghost-white, 0.9);
   border: 2px solid $color-default-white;
 
-  &--play {
+  &.is-active {
     padding: 0;
+
+    width: 340px;
+    height: 220px;
 
     background-color: $color-transparent;
     border: none;

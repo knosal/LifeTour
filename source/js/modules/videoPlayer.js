@@ -1,6 +1,6 @@
-const root = document.querySelector('.hero__video');
-const cover = root.querySelector('picture');
-const button = root.querySelector('.video__button');
+const container = document.querySelector('.hero__video');
+const cover = container.querySelector('picture');
+const buttonPlay = container.querySelector('.video__button');
 
 const FrameSettings = {
   src: 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1',
@@ -10,27 +10,33 @@ const FrameSettings = {
   allowfullscreen: '',
 };
 
+const hideContent = () => {
+  if (container) {
+    cover.style.display = 'none';
+    buttonPlay.style.display = 'none';
+  }
+};
+
 const createVideo = () => {
   const video = document.createElement('iframe');
 
-  video.setAttribute('src', FrameSettings.src);
-  video.setAttribute('title', FrameSettings.title);
-  video.setAttribute('frameborder', FrameSettings.frameborder);
-  video.setAttribute('allow', FrameSettings.allow);
-  video.setAttribute('allowfullscreen', FrameSettings.allowfullscreen);
-  video.classList.add('.hero__videoplayer');
-  root.append(video);
+  Object.entries(FrameSettings).forEach(([key, value]) => {
+    video.setAttribute(key, value);
+  });
+
+  container.append(video);
 };
 
 const initVideoPlayer = () => {
-  if (root && cover && button) {
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      cover.style.display = 'none';
-      button.style.display = 'none';
-      createVideo();
-    });
+  if (!container || !buttonPlay) {
+    return; // Не продолжаем, если нет элементов
   }
+
+  buttonPlay.addEventListener('click', (event) => {
+    event.preventDefault();
+    hideContent();
+    createVideo();
+  });
 };
 
 export { initVideoPlayer };

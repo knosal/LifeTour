@@ -62,3 +62,7 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.leaflet-control-container .leaflet-bottom.leaflet-right {
+  display: none;
+}

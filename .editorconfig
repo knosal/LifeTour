@@ -25,3 +25,7 @@ trim_trailing_whitespace = false
 # Отключаем форматирование для файла variables.scss
 indent_style = unset
 
+[*.js]
+# Отключаем форматирование для файлов js
+indent_style = unset
+

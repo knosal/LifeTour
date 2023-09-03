@@ -67,11 +67,16 @@
 
   transition: all $trans-default;
 
-  @include hover-focus {
+  &:hover {
     color: $color-navy-blue;
   }
 
-  @include active {
+  &:focus,
+  &:focus-within {
+    color: $color-navy-blue;
+  }
+
+  &:active {
     color: $color-midnight-express;
   }
 
@@ -118,12 +123,17 @@
 
   transition: all $trans-default;
 
-  @include hover-focus {
-    background-color: $color-navy-blue;
+  &:hover {
+    color: $color-navy-blue;
   }
 
-  @include active {
-    background-color: $color-midnight-express;
+  &:focus,
+  &:focus-within {
+    color: $color-navy-blue;
+  }
+
+  &:active {
+    color: $color-midnight-express;
   }
 }
 

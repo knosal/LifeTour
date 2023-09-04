@@ -28,6 +28,10 @@
 
 .hero__content {
   display: none;
+}
+
+.swiper-slide-active .hero__content {
+  display: grid;
   align-content: flex-start;
   padding-top: 142px;
   padding-bottom: 80px;
@@ -46,10 +50,6 @@
     padding-top: 86px;
     padding-bottom: 152px;
   }
-}
-
-.swiper-slide-active .hero__content {
-  display: grid;
 }
 
 .hero__background {

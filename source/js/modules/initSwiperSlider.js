@@ -1,6 +1,5 @@
 import Swiper from '../vendor/swiper';
 import { isMobile } from '../utils/is-mobile';
-// eslint-disable-next-line no-new
 
 const initSwiper = (selector, options) => {
   const element = document.querySelector(selector);
@@ -26,17 +25,6 @@ const sliderConfigs = [
       },
     },
   },
-  /* {
-     selector: '.advantages__slider',
-     options: {
-       loop: true,
-       slidesPerView: 'auto',
-       navigation: {
-         nextEl: '.advantages__next',
-         prevEl: '.advantages__prev',
-       },
-     },
-   },*/
   {
     selector: '.gallery__slider',
     options: {
@@ -106,15 +94,6 @@ const sliderConfigs = [
     },
   },
 ];
-/*
-const initAllSliders = (resolutionCheckFn) => {
-  sliderConfigs.forEach((config) => {
-    if (!resolutionCheckFn || resolutionCheckFn(config.selector)) {
-      initSwiper(config.selector, config.options);
-    }
-  });
-};
-*/
 
 const initAllSliders = () => {
   sliderConfigs.forEach((config) => {

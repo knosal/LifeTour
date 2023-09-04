@@ -29,7 +29,7 @@ const createVideo = () => {
 
 const initVideoPlayer = () => {
   if (!container || !buttonPlay) {
-    return; // Не продолжаем, если нет элементов
+    return;
   }
 
   buttonPlay.addEventListener('click', (event) => {

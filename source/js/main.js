@@ -22,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
+  initButtonMenu();
+  initVideoPlayer();
+  initAllSliders();
   // Modules
   // ---------------------------------
 
@@ -34,10 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
 
     // createScript();
-    initButtonMenu();
-    initVideoPlayer();
     initAudioPlayer();
-    initAllSliders();
     addAdvantagesSlider();
     initMap();
   });

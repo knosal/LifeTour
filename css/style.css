@@ -2206,6 +2206,10 @@ button,
   max-width: 55%;
 }
 
+.header__button-toggle {
+  display: none;
+}
+
 .navigation {
   z-index: 3;
 }
@@ -2253,10 +2257,6 @@ button,
 .navigation a:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.navigation__button-toggle {
-  display: none;
 }
 
 .logo {
@@ -2346,14 +2346,18 @@ button,
 }
 
 .hero__content {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-flex-line-pack: start;
   align-content: flex-start;
   padding-top: 142px;
   padding-bottom: 80px;
   -ms-grid-columns: 1fr auto;
   grid-template-columns: 1fr auto;
+}
+
+.swiper-slide-active .hero__content {
+  display: -ms-grid;
+  display: grid;
 }
 
 .hero__background {
@@ -2497,7 +2501,7 @@ button,
   gap: 0 8px;
 }
 
-.hero__slider .hero__pagination-button {
+.hero__slider .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0);
@@ -2508,18 +2512,18 @@ button,
   transition: all 0.3s ease;
 }
 
-.hero__slider .hero__pagination-button:hover {
+.hero__slider .swiper-pagination-bullet:hover {
   background-color: #ffffff;
   opacity: 0.4;
 }
 
-.hero__slider .hero__pagination-button:focus,
-.hero__slider .hero__pagination-button:focus-within {
+.hero__slider .swiper-pagination-bullet:focus,
+.hero__slider .swiper-pagination-bullet:focus-within {
   background-color: #ffffff;
   opacity: 0.4;
 }
 
-.hero__slider .hero__pagination-button:active {
+.hero__slider .swiper-pagination-bullet:active {
   opacity: 0.7;
 }
 
@@ -4225,6 +4229,21 @@ button,
     color: inherit;
   }
 
+  .header__button-toggle {
+    z-index: 4;
+    display: block;
+    -webkit-transform: translate(-9px, -4px);
+    -ms-transform: translate(-9px, -4px);
+    transform: translate(-9px, -4px);
+  }
+
+  .header__button-toggle.is-opened {
+    display: block;
+    -webkit-transform: translate(-11px, 0);
+    -ms-transform: translate(-11px, 0);
+    transform: translate(-11px, 0);
+  }
+
   .navigation {
     display: none;
     position: absolute;
@@ -4275,21 +4294,6 @@ button,
   .navigation.is-opened a:focus:active,
   .navigation.is-opened a:focus-within:active {
     border-color: transparent;
-  }
-
-  .navigation__button-toggle {
-    z-index: 4;
-    display: block;
-    -webkit-transform: translate(-9px, -4px);
-    -ms-transform: translate(-9px, -4px);
-    transform: translate(-9px, -4px);
-  }
-
-  .navigation__button-toggle.is-opened {
-    display: block;
-    -webkit-transform: translate(-11px, 0);
-    -ms-transform: translate(-11px, 0);
-    transform: translate(-11px, 0);
   }
 
   .logo {
@@ -5053,17 +5057,7 @@ button,
     justify-self: flex-end;
   }
 
-  .navigation {
-    padding: 94px 10px 45px;
-  }
-
-  .navigation a {
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 0.56px;
-  }
-
-  .navigation__button-toggle {
+  .header__button-toggle {
     align-self: flex-start;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -5086,9 +5080,19 @@ button,
     -ms-grid-column: 3;
   }
 
-  .navigation__button-toggle {
+  .header__button-toggle {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+  }
+
+  .navigation {
+    padding: 94px 10px 45px;
+  }
+
+  .navigation a {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.56px;
   }
 
   .logo svg {
@@ -5141,7 +5145,7 @@ button,
     gap: 0 4px;
   }
 
-  .hero__slider .hero__pagination-button {
+  .hero__slider .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
   }

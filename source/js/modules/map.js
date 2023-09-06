@@ -1,4 +1,4 @@
-import { map as createMap, tileLayer as createTitleLayers, icon as createIcon, marker as createMarker } from '../vendor/leaflet';
+import {map as createMap, tileLayer as createTitleLayers, icon as createIcon, marker as createMarker} from '../vendor/leaflet';
 
 const initMap = () => {
   // Указатель где вывести карту.
@@ -27,8 +27,8 @@ const initMap = () => {
     // createTitleLayers: Функция для создания слоя с тайлами (фрагментами карты).
     createTitleLayers(url).addTo(addMap);
     // createMarker: Функция для создания маркера на карте.
-    createMarker(coordinateMarker, { icon }).addTo(addMap);
+    createMarker(coordinateMarker, {icon}).addTo(addMap);
   }
 };
 
-export { initMap };
+export {initMap};

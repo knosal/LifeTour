@@ -7,9 +7,9 @@ const initButtonMenu = () => {
   const navLink = header.querySelector('.navigation a');
 
   const isEscapeKey = (evt) => evt.key === 'Escape';
-  const onModalEscKeydown = (evt) => isEscapeKey(evt) ? closeMenu() : null;
-  const onLinkClick = (evt) => evt.target.matches(navLink) ? closeMenu() : null;
-  const clickActionToggle = () => toggleBtn.classList.contains(isOpened) ? closeMenu() : openMenu();
+  const onModalEscKeydown = (evt) => (isEscapeKey(evt) ? closeMenu() : null);
+  const onLinkClick = (evt) => (evt.target.matches(navLink) ? closeMenu() : null);
+  const clickActionToggle = () => (toggleBtn.classList.contains(isOpened) ? closeMenu() : openMenu());
 
   const openMenu = () => {
     container.classList.add(isOpened);
@@ -34,4 +34,4 @@ const initButtonMenu = () => {
   toggleBtn.addEventListener('click', clickActionToggle);
 };
 
-export { initButtonMenu };
+export {initButtonMenu};

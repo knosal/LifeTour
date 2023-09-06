@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
 
-  >picture {
+  > picture {
     position: absolute;
     bottom: -218px;
     left: 0;
@@ -9,7 +9,7 @@
   }
 
   @include vp-1199 {
-    >picture {
+    > picture {
       display: none;
     }
   }
@@ -145,11 +145,10 @@
     }
   }
 
-  &>*:last-child {
+  & > *:last-child {
     margin: 0;
   }
 }
-
 
 .reviews__author {
   margin: auto 0 0;

@@ -39,4 +39,4 @@ const initVideoPlayer = () => {
   });
 };
 
-export { initVideoPlayer };
+export {initVideoPlayer};

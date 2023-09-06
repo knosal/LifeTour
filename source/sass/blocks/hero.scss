@@ -12,6 +12,10 @@
   @include vp-767 {
     margin-top: -242px;
   }
+
+  h1 {
+    display: none;
+  }
 }
 
 .hero__list {
@@ -61,7 +65,7 @@
   height: 100%;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
 
     width: 100%;

@@ -1,5 +1,5 @@
 import Swiper from '../vendor/swiper';
-import { isMobile } from '../utils/is-mobile';
+import {isMobile} from '../utils/is-mobile';
 
 let swiper = null;
 
@@ -37,4 +37,4 @@ const addAdvantagesSlider = () => {
   window.addEventListener('resize', initSlider);
 };
 
-export { addAdvantagesSlider };
+export {addAdvantagesSlider};

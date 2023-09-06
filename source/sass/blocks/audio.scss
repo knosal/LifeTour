@@ -32,13 +32,21 @@
   flex-direction: column;
 
   gap: 3px 0;
-}
 
-.audio__name {
-  margin: 0;
+  p:first-child {
+    margin: 0;
 
-  font-size: 22px;
-  line-height: 22px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  p:last-child {
+    display: flex;
+    align-items: end;
+    margin: 0 0 1px;
+
+    gap: 0 14px;
+  }
 }
 
 .audio__band {
@@ -48,14 +56,6 @@
   line-height: normal;
 
   opacity: 0.48;
-}
-
-.audio__actions {
-  display: flex;
-  align-items: end;
-  margin: 0 0 1px;
-
-  gap: 0 14px;
 }
 
 .audio__button {

@@ -1,5 +1,5 @@
 import Swiper from '../vendor/swiper';
-import { isMobile } from '../utils/is-mobile';
+import {isMobile} from '../utils/is-mobile';
 
 const initSwiper = (selector, options) => {
   const element = document.querySelector(selector);
@@ -101,4 +101,4 @@ const initAllSliders = () => {
   });
 };
 
-export { initAllSliders };
+export {initAllSliders};

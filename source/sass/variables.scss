@@ -21,7 +21,7 @@ $color-torch-red: #ff121f;
 // Gradient
 
 $gradient-overlay-0: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
-$gradient-overlay-60: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 40%, rgba(0, 0, 0, 0.60) 80%);
+$gradient-overlay-60: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 80%);
 
 // Shadow
 
@@ -35,7 +35,7 @@ $fz-default: 16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-montserrat: "Montserrat", "Arial", sans-serif;
+$ff-montserrat: 'Montserrat', 'Arial', sans-serif;
 
 // Animation
 // ---------------------------------

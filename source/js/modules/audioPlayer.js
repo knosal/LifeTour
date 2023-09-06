@@ -40,4 +40,4 @@ const initAudioPlayer = () => {
   });
 };
 
-export { initAudioPlayer };
+export {initAudioPlayer};

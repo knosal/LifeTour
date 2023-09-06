@@ -1,7 +1,7 @@
 import {map as createMap, tileLayer as createTitleLayers, icon as createIcon, marker as createMarker} from '../vendor/leaflet';
 
 const initMap = () => {
-  // Указатель где вывести карту.
+  // Указатель, где вывести карту.
   const map = document.querySelector('#map');
 
   if (map) {
@@ -11,22 +11,48 @@ const initMap = () => {
     const coordinateMarker = [55.816758, 37.637243];
     const url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-    // createMap: Функция для создания объекта карты.
+    // Переменные для размеров иконок в зависимости от ширины экрана.
+    const iconSizeSmall = [40, 40]; // Размер для маленьких экранов (320px и меньше).
+    const iconSizeMedium = [44, 44]; // Размер для средних экранов (321px - 768px).
+    const iconSizeLarge = [48, 48]; // Размер для больших экранов (769px и больше).
+
+    // Функция для определения размера иконки в зависимости от ширины экрана.
+    const getIconSize = () => {
+      const windowWidth = window.innerWidth;
+
+      const breakpoints = {
+        small: 320,
+        medium: 768,
+      };
+
+      if (windowWidth <= breakpoints.small) {
+        return iconSizeSmall;
+      } else if (windowWidth <= breakpoints.medium) {
+        return iconSizeMedium;
+      } else {
+        return iconSizeLarge;
+      }
+    };
+
+    const iconSize = getIconSize();
+
+    // Функция для создания иконки, которая будет использоваться для маркера на карте.
+    const icon = createIcon({
+      iconUrl: './img/svg/map-marker.svg',
+      iconSize: iconSize,
+    });
+
+    // Функция для создания объекта карты.
     const addMap = createMap('map', {
       center: coordinateMap,
       zoom: 13,
       scrollWheelZoom: false,
     });
 
-    // createIcon: Функция для создания иконки, которая будет использоваться для маркера на карте.
-    const icon = createIcon({
-      iconUrl: './img/svg/map-marker.svg',
-      iconSize: [48, 48],
-    });
-
-    // createTitleLayers: Функция для создания слоя с тайлами (фрагментами карты).
+    // Функция для создания слоя с тайлами (фрагментами карты).
     createTitleLayers(url).addTo(addMap);
-    // createMarker: Функция для создания маркера на карте.
+
+    // Функция для создания маркера на карте.
     createMarker(coordinateMarker, {icon}).addTo(addMap);
   }
 };

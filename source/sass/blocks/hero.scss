@@ -152,6 +152,7 @@
 .hero__button {
   margin: 0 0 150px;
   margin-top: -17px;
+  max-width: 650px;
 
   grid-area: 2 / 1 / 3 / 2;
 
@@ -163,6 +164,8 @@
 
   @include vp-767 {
     margin: 0;
+    width: calc(100% - 100px);
+    min-width: 180px;
   }
 }
 
@@ -223,10 +226,23 @@
 }
 
 .hero__video {
-  margin: 159px 0 0;
+  position: absolute;
+  top: 301px;
+  width: 482px;
+  height: 317px;
+  margin: 0;
+  padding: 0;
 
   @include vp-1199 {
-    margin: 0 calc(17% + 3px);
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0 116px 68px;
+  }
+
+  @include vp-767 {
+    display: none;
+    padding: 0;
   }
 }
 

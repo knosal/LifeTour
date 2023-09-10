@@ -42,15 +42,16 @@
 
     column-gap: 30px;
 
-    grid-template-areas: "toggle logo"
-      ". phone";
+    grid-template-areas:
+      'toggle logo'
+      '. phone';
     grid-template-columns: auto 1fr;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 10px;
   }
 
   &::before {
-    content: "";
+    content: '';
     position: fixed;
     top: 0;
     right: 0;
@@ -108,7 +109,10 @@
 }
 
 .header__user {
-  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 4px;
 
   @include vp-1199 {
     transform: translate(0, -4px);
@@ -141,7 +145,7 @@
     &.is-opened {
       display: block;
 
-      transform: translate(-11px, 0);
+      transform: translate(-11px, -2px);
     }
   }
 
@@ -153,5 +157,9 @@
 
     grid-area: toggle;
     grid-row: span 2;
+
+    &.is-opened {
+      transform: translate(-11px, -12px);
+    }
   }
 }

@@ -8,7 +8,7 @@
     right: 0;
     left: 0;
 
-    padding: 120px 40px 64px;
+    padding: 118px 40px 64px;
 
     background-color: $color-default-white;
 
@@ -41,7 +41,11 @@
       max-height: 50vh;
       overflow-y: auto;
 
-      gap: 16px;
+      gap: 19px;
+    }
+
+    @include vp-767 {
+      gap: 12px;
     }
   }
 

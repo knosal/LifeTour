@@ -4931,6 +4931,7 @@ button,
 
   .training__process-item p {
     max-width: 70%;
+    min-height: 44px;
     font-size: 14px;
     line-height: 22px;
   }
@@ -5745,6 +5746,7 @@ button,
 
   .training__process-item p {
     max-width: 85%;
+    min-height: auto;
     font-size: 12px;
     line-height: 18px;
   }

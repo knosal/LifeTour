@@ -2979,15 +2979,15 @@ button,
 }
 
 .tours__item--elbrus {
-  background: rgba(2, 102, 193, 0.3) url("../../img/tours/elbrus-tours.jpg") 58% 0/cover no-repeat;
+  background: rgba(2, 102, 193, 0.3) url("../../img/tours/elbrus-tours.webp") 58% 0/cover no-repeat;
 }
 
 .tours__item--altai {
-  background: rgba(2, 102, 193, 0.3) url("../../img/tours/altai-tours.jpg") 58% 0/cover no-repeat;
+  background: rgba(2, 102, 193, 0.3) url("../../img/tours/altai-tours.webp") 58% 0/cover no-repeat;
 }
 
 .tours__item--adygea {
-  background: rgba(2, 102, 193, 0.3) url("../../img/tours/adygea-tours.jpg") 58% 0/cover no-repeat;
+  background: rgba(2, 102, 193, 0.3) url("../../img/tours/adygea-tours.webp") 58% 0/cover no-repeat;
 }
 
 .tours__detalis {

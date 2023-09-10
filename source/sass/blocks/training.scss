@@ -266,6 +266,7 @@
 
     @include vp-1199 {
       max-width: 70%;
+      min-height: 44px;
 
       font-size: 14px;
       line-height: 22px;
@@ -273,6 +274,7 @@
 
     @include vp-767 {
       max-width: 85%;
+      min-height: auto;
 
       font-size: 12px;
       line-height: 18px;

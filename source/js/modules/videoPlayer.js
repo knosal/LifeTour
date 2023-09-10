@@ -1,42 +1,41 @@
-const container = document.querySelector('.hero__video');
-const cover = container.querySelector('picture');
-const buttonPlay = container.querySelector('.video__button');
+const video = document.querySelector('.video__content');
+const button = document.querySelector('.video__button');
+const slides = document.querySelectorAll('.hero__item');
+const pagination = document.querySelector('.hero__pagination');
 
-const FrameSettings = {
-  src: 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1',
-  title: 'YouTube video player',
-  frameborder: 0,
-  allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
-  allowfullscreen: '',
-};
-
-const hideContent = () => {
-  if (container) {
-    cover.style.display = 'none';
-    buttonPlay.style.display = 'none';
+const videoButtonHandler = () => {
+  if (video.paused) {
+    video.play();
+    button.style.display = 'none';
+  } else {
+    video.pause();
   }
 };
 
-const createVideo = () => {
-  const video = document.createElement('iframe');
-
-  Object.entries(FrameSettings).forEach(([key, value]) => {
-    video.setAttribute(key, value);
-  });
-
-  container.append(video);
+const videoOnclick = () => {
+  video.pause();
+  button.style.display = 'block';
 };
 
 const initVideoPlayer = () => {
-  if (!container || !buttonPlay) {
-    return;
+  if (video) {
+    video.addEventListener('click', videoOnclick);
+    button.addEventListener('click', videoButtonHandler);
   }
+};
 
-  buttonPlay.addEventListener('click', (event) => {
-    event.preventDefault();
-    hideContent();
-    createVideo();
+const stopVideoOnTabChange = () => {
+  pagination.addEventListener('click', () => {
+    slides.forEach((slide) => {
+      const isSlideActive = slide.classList.contains('swiper-slide-active');
+      const slideVideo = slide.querySelector('.video__content');
+
+      if (slideVideo && isSlideActive) {
+      } else {
+        videoOnclick();
+      }
+    });
   });
 };
 
-export {initVideoPlayer};
+export {initVideoPlayer, stopVideoOnTabChange};

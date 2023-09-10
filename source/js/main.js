@@ -2,8 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './utils/form-validate/form';
 import './utils/scroll-lock';
 import {initButtonMenu} from './modules/menuToggle';
-import {initVideoPlayer} from './modules/videoPlayer';
-import {initAudioPlayer} from './modules/audioPlayer';
+import {initVideoPlayer, stopVideoOnTabChange} from './modules/videoPlayer';
+import {initAudioPlayer, stopAudioOnTabChange} from './modules/audioPlayer';
 import {initAllSliders} from './modules/initSwiperSlider';
 import {addAdvantagesSlider} from './modules/advantagresSlider';
 import {initMap} from './modules/map';
@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   initButtonMenu();
   initVideoPlayer();
+  stopVideoOnTabChange();
   initAllSliders();
   // Modules
   // ---------------------------------
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     createScript();
     initAudioPlayer();
+    stopAudioOnTabChange();
     addAdvantagesSlider();
     initMap();
   });

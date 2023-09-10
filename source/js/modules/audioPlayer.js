@@ -1,5 +1,9 @@
 const container = document.querySelector('.audio');
 const buttonPlay = container.querySelector('[data-name="audio-play"]');
+const slides = document.querySelectorAll('.hero__item');
+const pagination = document.querySelector('.hero__pagination');
+const content = container.querySelector('.audio__wrapper');
+const audio = document.createElement('iframe');
 
 const FrameSettings = {
   src: 'https://music.yandex.ru/iframe/#track/112912322/25474374',
@@ -13,14 +17,12 @@ const FrameSettings = {
 };
 
 const hideContent = () => {
-  const content = container.querySelector('.audio__wrapper');
   if (content) {
     content.style.display = 'none';
   }
 };
 
 const createAudio = () => {
-  const audio = document.createElement('iframe');
   Object.entries(FrameSettings).forEach(([key, value]) => {
     audio.setAttribute(key, value);
   });
@@ -40,4 +42,20 @@ const initAudioPlayer = () => {
   });
 };
 
-export {initAudioPlayer};
+const stopAudioOnTabChange = () => {
+  pagination.addEventListener('click', () => {
+    slides.forEach((slide) => {
+      const isSlideActive = slide.classList.contains('swiper-slide-active');
+      const slideAudio = slide.querySelector('.audio is-active');
+
+      if (slideAudio && isSlideActive) {
+      } else {
+        audio.remove();
+        content.style.display = 'block';
+        container.classList.remove('is-active');
+      }
+    });
+  });
+};
+
+export {initAudioPlayer, stopAudioOnTabChange};

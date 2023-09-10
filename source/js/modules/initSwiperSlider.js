@@ -17,12 +17,13 @@ const sliderConfigs = [
     selector: '.hero__slider',
     options: {
       loop: true,
-      allowTouchMove: true,
+      slidesPerView: 1,
       pagination: {
         el: '.hero__pagination',
         type: 'bullets',
         clickable: true,
       },
+      simulateTouch: false,
     },
   },
   {

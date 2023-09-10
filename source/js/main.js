@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    createScript();
+    //createScript();
     initAudioPlayer();
     stopAudioOnTabChange();
     addAdvantagesSlider();

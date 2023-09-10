@@ -123,15 +123,27 @@
   }
 
   &--elbrus {
-    background: $tours-cards url('../../img/tours/elbrus-tours.webp') 58% 0 / cover no-repeat;
+    background-color: $tours-cards;
+    background-image: url('/img/tours/elbrus-tours.webp');
+    background-position: 58% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &--altai {
-    background: $tours-cards url('../../img/tours/altai-tours.webp') 58% 0 / cover no-repeat;
+    background-color: $tours-cards;
+    background-image: url('/img/tours/altai-tours.webp');
+    background-position: 58% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &--adygea {
-    background: $tours-cards url('../../img/tours/adygea-tours.webp') 58% 0 / cover no-repeat;
+    background-color: $tours-cards;
+    background-image: url('/img/tours/adygea-tours.webp');
+    background-position: 58% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 

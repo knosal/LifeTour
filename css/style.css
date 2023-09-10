@@ -4621,7 +4621,7 @@ button,
     -ms-flex-align: center;
     align-items: center;
     padding-top: 104px;
-    padding-bottom: 218px;
+    padding-bottom: 157px;
   }
 
   .hero__title {
@@ -4655,6 +4655,7 @@ button,
 
   .hero__button {
     margin: -17px 0 50px;
+    width: calc(100% - 470px);
   }
 
   .hero__details-item {
@@ -4760,6 +4761,7 @@ button,
   .tours__detalis-inner {
     -ms-grid-columns: auto 1fr 1fr;
     grid-template-columns: auto 1fr 1fr;
+    row-gap: 11px;
   }
 
   .tours__detalis-inner h3 {
@@ -4767,7 +4769,7 @@ button,
     -ms-grid-column-span: 3;
     grid-column: 1/4;
     max-width: 233px;
-    margin-top: 8px;
+    margin-top: 13px;
   }
 
   .tours__detalis-location {
@@ -4808,13 +4810,21 @@ button,
   }
 
   .tours__detalis-bottom {
-    -webkit-transform: translate(0, -4px);
-    -ms-transform: translate(0, -4px);
-    transform: translate(0, -4px);
+    -webkit-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    transform: translate(0, 0px);
   }
 
   .tours__group {
     margin-left: 1px;
+  }
+
+  .tours__show-all {
+    padding: 0;
+  }
+
+  .tours__show-all svg {
+    margin-left: 8px;
   }
 
   .tours__background {
@@ -5559,9 +5569,13 @@ button,
     max-width: 225px;
     font-size: 20px;
     line-height: 24px;
+    margin-top: -3px;
   }
 
   .tours__detalis-location {
+    -webkit-transform: translate(0, -12px);
+    -ms-transform: translate(0, -12px);
+    transform: translate(0, -12px);
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
@@ -5597,6 +5611,9 @@ button,
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+    -webkit-transform: translate(-1px, 0);
+    -ms-transform: translate(-1px, 0);
+    transform: translate(-1px, 0);
   }
 
   .tours__complexity span[data-complexity] {
@@ -5636,7 +5653,7 @@ button,
   }
 
   .training__container {
-    padding-top: 27px;
+    padding-top: 25px;
     padding-bottom: 8px;
   }
 
@@ -5856,6 +5873,7 @@ button,
 
   .reviews__info {
     margin: 0 0 16px;
+    padding: 0;
   }
 
   .reviews__name {

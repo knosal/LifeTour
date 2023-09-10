@@ -39,12 +39,12 @@
           </button>
           <nav class="header__navigation navigation">
             <ul aria-label="Меню сайта">
-              <li><a href="#tours">Туры</a></li>
-              <li><a href="#training">Обучение</a></li>
-              <li><a href="#about-us">О&nbsp;нас</a></li>
-              <li><a href="#reviews">Отзывы</a></li>
-              <li><a href="#gallery">Фотографии</a></li>
-              <li><a href="#contacts">Контакты</a></li>
+              <li><a class="navigation__link" href="#tours">Туры</a></li>
+              <li><a class="navigation__link" href="#training">Обучение</a></li>
+              <li><a class="navigation__link" href="#about-us">О&nbsp;нас</a></li>
+              <li><a class="navigation__link" href="#reviews">Отзывы</a></li>
+              <li><a class="navigation__link" href="#gallery">Фотографии</a></li>
+              <li><a class="navigation__link" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
           <div class="header__user phone">
@@ -81,17 +81,14 @@
                   </ul>
 
                   <div class="hero__video video">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 1199px)" srcset="./img/hero/first-slide/poster-tablet@1x.webp, ./img/hero/first-slide/poster-tablet@2x.webp 2x" width="442" height="300" />
-                      <source type="image/webp" srcset="./img/hero/first-slide/poster-desktop@1x.webp, ./img/hero/first-slide/poster-desktop@2x.webp 2x" width="482" height="317" />
-                      <source media="(max-width: 1199px)" srcset="./img/hero/first-slide/poster-tablet@1x.jpg, ./img/hero/first-slide/poster-tablet@2x.jpg 2x" width="442" height="300" />
-                      <img src="./img/hero/first-slide/poster-desktop@1x.jpg" srcset="./img/hero/first-slide/poster-desktop@2x.jpg 2x" width="482" height="317" alt="Постер: человек в синей курткее, стоящий на горе." />
-                    </picture>
-                    <button class="video__button" type="button" aria-label="Воспроизвести видео." data-src="9TZXsZItgdw">
-                      <svg width="12" height="22" aria-hidden="true" focusable="false">
-                        <use href="./img/sprite.svg#play-video"></use>
-                      </svg>
-                    </button>
+                    <div class="video__wrapper">
+                      <video class="video__content" src="img/hero/first-slide/html-academy-courses.mp4" preload="none" playsinline poster="img/hero/first-slide/hero-video-poster.webp"></video>
+                      <button class="video__button" type="button" aria-label="Воспроизвести видео." data-src="9TZXsZItgdw">
+                        <svg width="12" height="22" aria-hidden="true" focusable="false">
+                          <use href="./img/sprite.svg#play-video"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <picture class="hero__background">
@@ -257,264 +254,252 @@
             </div>
             <div class="tours__slider swiper">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/tours/caucasus-mobile@1x.webp, ./img/tours/caucasus-mobile@2x.webp 2x" width="290" height="412" />
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/tours/caucasus-tablet@1x.webp, ./img/tours/caucasus-tablet@2x.webp 2x" width="324" height="412" />
-                    <source type="image/webp" srcset="./img/tours/caucasus-desktop@1x.webp, ./img/tours/caucasus-desktop@2x.webp 2x" width="380" height="412" />
-                    <source media="(max-width: 767px)" srcset="./img/tours/caucasus-mobile@1x.jpg, ./img/tours/caucasus-mobile@2x.jpg 2x" width="290" height="412" />
-                    <source media="(max-width: 1199px)" srcset="./img/tours/caucasus-tablet@1x.jpg, ./img/tours/caucasus-tablet@2x.jpg 2x" width="324" height="412" />
-                    <img src="./img/tours/caucasus-desktop@1x.jpg" srcset="./img/tours/caucasus-desktop@2x.jpg 2x" width="380" height="412" alt="Река, протекающая через долину с горами на заднем плане." loading="lazy" />
-                  </picture>
+                <li class="swiper-slide tours__item tours__item--elbrus">
                   <div class="tours__detalis">
-                    <h3>Путешествие вокруг Эльбруса</h3>
-                    <div class="tours__detalis-top">
-                      <div class="tours__place">
+                    <div class="tours__detalis-inner">
+                      <div class="tours__detalis-location">
                         <svg width="9" height="12" aria-hidden="true" focusable="false">
                           <use href="./img/sprite.svg#pin"></use>
                         </svg>
-                        Кавказ
+                        <span>Кавказ</span>
                       </div>
-                      <div class="tours__days">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#sun"></use>
-                        </svg>
-                        <span>4&nbsp;дня</span>
+
+                      <div class="tours__detalis-duration">
+                        <div class="tours__days">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#sun"></use>
+                          </svg>
+                          <span>4&nbsp;дня</span>
+                        </div>
+                        <div class="tours__nigts">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#moon"></use>
+                          </svg>
+                          <span>3&nbsp;ночи</span>
+                        </div>
                       </div>
-                      <div class="tours__nigts">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#moon"></use>
-                        </svg>
-                        <span>3&nbsp;ночи</span>
-                      </div>
-                    </div>
-                    <div class="tours__detalis-bottom">
-                      <p>
-                        Сложность:
-                        <span data-complexity="3 из 5.">
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                        </span>
-                      </p>
-                      <div class="tours__date">
-                        Даты набора:
-                        <span>12.06-19.06</span>
-                      </div>
-                      <div class="tours__group">
-                        Группа:
-                        <span>до&nbsp;15&nbsp;чел.</span>
+
+                      <h3>Путешествие вокруг Эльбруса</h3>
+
+                      <div class="tours__detalis-bottom">
+                        <div class="tours__complexity">
+                          Сложность:
+                          <span data-complexity="3 из 5.">
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="tours__date">
+                          Даты набора:
+                          <span>12.06-19.06</span>
+                        </div>
+                        <div class="tours__group">
+                          Группа:
+                          <span>до&nbsp;15&nbsp;чел.</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="swiper-slide">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/tours/altai-mobile@1x.webp, ./img/tours/altai-mobile@2x.webp 2x" width="290" height="412" />
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/tours/altai-tablet@1x.webp, ./img/tours/altai-tablet@2x.webp 2x" width="324" height="412" />
-                    <source type="image/webp" srcset="./img/tours/altai-desktop@1x.webp, ./img/tours/altai-desktop@2x.webp 2x" width="380" height="412" />
-                    <source media="(max-width: 767px)" srcset="./img/tours/altai-mobile@1x.jpg, ./img/tours/altai-mobile@2x.jpg 2x" width="290" height="412" />
-                    <source media="(max-width: 1199px)" srcset="./img/tours/altai-tablet@1x.jpg, ./img/tours/altai-tablet@2x.jpg 2x" width="324" height="412" />
-                    <img src="./img/tours/altai-desktop@1x.jpg" srcset="./img/tours/altai-desktop@2x.jpg 2x" width="380" height="412" alt="Река, окруженная горами." loading="lazy" />
-                  </picture>
+                <li class="swiper-slide tours__item tours__item--altai">
                   <div class="tours__detalis">
-                    <h3>Путь к&nbsp;подножию Белухи</h3>
-                    <div class="tours__detalis-top">
-                      <div class="tours__place">
+                    <div class="tours__detalis-inner">
+                      <div class="tours__detalis-location">
                         <svg width="9" height="12" aria-hidden="true" focusable="false">
                           <use href="./img/sprite.svg#pin"></use>
                         </svg>
-                        Алтай
+                        <span>Алтай</span>
                       </div>
-                      <div class="tours__days">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#sun"></use>
-                        </svg>
-                        <span>14&nbsp;дней</span>
+
+                      <div class="tours__detalis-duration">
+                        <div class="tours__days">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#sun"></use>
+                          </svg>
+                          <span>14&nbsp;дней</span>
+                        </div>
+                        <div class="tours__nigts">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#moon"></use>
+                          </svg>
+                          <span>13&nbsp;ночей</span>
+                        </div>
                       </div>
-                      <div class="tours__nigts">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#moon"></use>
-                        </svg>
-                        <span>13&nbsp;ночей</span>
-                      </div>
-                    </div>
-                    <div class="tours__detalis-bottom">
-                      <p>
-                        Сложность:
-                        <span data-complexity="2 из 5.">
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                        </span>
-                      </p>
-                      <div class="tours__date">
-                        Даты набора:
-                        <span>14.06-23.06</span>
-                      </div>
-                      <div class="tours__group">
-                        Группа:
-                        <span>до&nbsp;25&nbsp;чел.</span>
+
+                      <h3>Путь&nbsp;к&nbsp;подножию Белухи</h3>
+
+                      <div class="tours__detalis-bottom">
+                        <div class="tours__complexity">
+                          Сложность:
+                          <span data-complexity="2 из 5.">
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="tours__date">
+                          Даты набора:
+                          <span>14.06-23.06</span>
+                        </div>
+                        <div class="tours__group">
+                          Группа:
+                          <span>до&nbsp;25&nbsp;чел.</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="swiper-slide">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/tours/adygea-mobile@1x.webp, ./img/tours/adygea-mobile@2x.webp 2x" width="290" height="412" />
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/tours/adygea-tablet@1x.webp, ./img/tours/adygea-tablet@2x.webp 2x" width="324" height="412" />
-                    <source type="image/webp" srcset="./img/tours/adygea-desktop@1x.webp, ./img/tours/adygea-desktop@2x.webp 2x" width="380" height="412" />
-                    <source media="(max-width: 767px)" srcset="./img/tours/adygea-mobile@1x.jpg, ./img/tours/adygea-mobile@2x.jpg 2x" width="290" height="412" />
-                    <source media="(max-width: 1199px)" srcset="./img/tours/adygea-tablet@1x.jpg, ./img/tours/adygea-tablet@2x.jpg 2x" width="324" height="412" />
-                    <img src="./img/tours/adygea-desktop@1x.jpg" srcset="./img/tours/adygea-desktop@2x.jpg 2x" width="380" height="412" alt="Река, протекающая через долину с горами на заднем плане." loading="lazy" />
-                  </picture>
+                <li class="swiper-slide tours__item tours__item--adygea">
                   <div class="tours__detalis">
-                    <h3>Через Фишт к&nbsp;Черному морю</h3>
-                    <div class="tours__detalis-top">
-                      <div class="tours__place tours__place--secondary">
+                    <div class="tours__detalis-inner">
+                      <div class="tours__detalis-location">
                         <svg width="9" height="12" aria-hidden="true" focusable="false">
                           <use href="./img/sprite.svg#pin"></use>
                         </svg>
-                        Адыгея
+                        <span>Адыгея</span>
                       </div>
-                      <div class="tours__days">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#sun"></use>
-                        </svg>
-                        <span>7&nbsp;дней</span>
+
+                      <div class="tours__detalis-duration">
+                        <div class="tours__days">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#sun"></use>
+                          </svg>
+                          <span>7&nbsp;дней</span>
+                        </div>
+                        <div class="tours__nigts">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#moon"></use>
+                          </svg>
+                          <span>6&nbsp;ночей</span>
+                        </div>
                       </div>
-                      <div class="tours__nigts">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#moon"></use>
-                        </svg>
-                        <span>6&nbsp;ночей</span>
-                      </div>
-                    </div>
-                    <div class="tours__detalis-bottom">
-                      <p>
-                        Сложность:
-                        <span data-complexity="3 из 5.">
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                        </span>
-                      </p>
-                      <div class="tours__date">
-                        Даты набора:
-                        <span>15.07-19.07</span>
-                      </div>
-                      <div class="tours__group">
-                        Группа:
-                        <span>до&nbsp;22&nbsp;чел.</span>
+
+                      <h3>Через Фишт к&nbsp;Черному морю</h3>
+
+                      <div class="tours__detalis-bottom">
+                        <div class="tours__complexity">
+                          Сложность:
+                          <span data-complexity="3 из 5.">
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="tours__date">
+                          Даты набора:
+                          <span>15.06-19.06</span>
+                        </div>
+                        <div class="tours__group">
+                          Группа:
+                          <span>до&nbsp;22&nbsp;чел.</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="swiper-slide">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/tours/caucasus-mobile@1x.webp, ./img/tours/caucasus-mobile@2x.webp 2x" width="290" height="412" />
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/tours/caucasus-tablet@1x.webp, ./img/tours/caucasus-tablet@2x.webp 2x" width="324" height="412" />
-                    <source type="image/webp" srcset="./img/tours/caucasus-desktop@1x.webp, ./img/tours/caucasus-desktop@2x.webp 2x" width="380" height="412" />
-                    <source media="(max-width: 767px)" srcset="./img/tours/caucasus-mobile@1x.jpg, ./img/tours/caucasus-mobile@2x.jpg 2x" width="290" height="412" />
-                    <source media="(max-width: 1199px)" srcset="./img/tours/caucasus-tablet@1x.jpg, ./img/tours/caucasus-tablet@2x.jpg 2x" width="324" height="412" />
-                    <img src="./img/tours/caucasus-desktop@1x.jpg" srcset="./img/tours/caucasus-desktop@2x.jpg 2x" width="380" height="412" alt="Река, протекающая через долину с горами на заднем плане." loading="lazy" />
-                  </picture>
+                <li class="swiper-slide tours__item tours__item--elbrus">
                   <div class="tours__detalis">
-                    <h3>Путешествие вокруг Эльбруса</h3>
-                    <div class="tours__detalis-top">
-                      <div class="tours__place">
+                    <div class="tours__detalis-inner">
+                      <div class="tours__detalis-location">
                         <svg width="9" height="12" aria-hidden="true" focusable="false">
                           <use href="./img/sprite.svg#pin"></use>
                         </svg>
-                        Кавказ
+                        <span>Кавказ</span>
                       </div>
-                      <div class="tours__days">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#sun"></use>
-                        </svg>
-                        <span>4&nbsp;дня</span>
+
+                      <div class="tours__detalis-duration">
+                        <div class="tours__days">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#sun"></use>
+                          </svg>
+                          <span>4&nbsp;дня</span>
+                        </div>
+                        <div class="tours__nigts">
+                          <svg width="20" height="20" aria-hidden="true" focusable="false">
+                            <use href="./img/sprite.svg#moon"></use>
+                          </svg>
+                          <span>3&nbsp;ночи</span>
+                        </div>
                       </div>
-                      <div class="tours__nigts">
-                        <svg width="20" height="20" aria-hidden="true" focusable="false">
-                          <use href="./img/sprite.svg#moon"></use>
-                        </svg>
-                        <span>3&nbsp;ночи</span>
-                      </div>
-                    </div>
-                    <div class="tours__detalis-bottom">
-                      <p>
-                        Сложность:
-                        <span data-complexity="3 из 5.">
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#full-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                          <svg width="15" height="14" aria-hidden="true" focusable="false">
-                            <use href="./img/sprite.svg#empty-star"></use>
-                          </svg>
-                        </span>
-                      </p>
-                      <div class="tours__date">
-                        Даты набора:
-                        <span>12.06-19.06</span>
-                      </div>
-                      <div class="tours__group">
-                        Группа:
-                        <span>до&nbsp;15&nbsp;чел.</span>
+
+                      <h3>Путешествие вокруг Эльбруса</h3>
+
+                      <div class="tours__detalis-bottom">
+                        <div class="tours__complexity">
+                          Сложность:
+                          <span data-complexity="3 из 5.">
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#full-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                            <svg width="15" height="14" aria-hidden="true" focusable="false">
+                              <use href="./img/sprite.svg#empty-star"></use>
+                            </svg>
+                          </span>
+                        </div>
+                        <div class="tours__date">
+                          Даты набора:
+                          <span>12.06-19.06</span>
+                        </div>
+                        <div class="tours__group">
+                          Группа:
+                          <span>до&nbsp;15&nbsp;чел.</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
-            <a href="#!">
+            <a class="tours__show-all" href="#!" aria-label="Показать все туры">
               Показать все туры
               <svg class="tours__link-icon" width="9" height="14" aria-hidden="true" focusable="false">
-                <use href="./img/sprite.svg#right"></use>
+                <use href="./img/sprite.svg#arrow-big-right"></use>
               </svg>
             </a>
           </div>
@@ -851,7 +836,7 @@
                   </span>
                   <div class="advantages__subtitle">
                     <h3>Экспертиза и&nbsp;знания</h3>
-                    <p>Наша команда опытных гидов имеет обширные знания о&nbsp;местности, погодных условиях и&nbsp;технике безопасности. Это гарантирует, что наши клиенты находятся в&nbsp;надежных руках и&nbsp;могут в&nbsp;полной мере насладиться опытом без опасений.</p>
+                    <p>Наша команда опытных гидов имеет обширные знания о&nbsp; местности, погодных условиях и&nbsp;технике безопасности. Это гарантирует, что наши клиенты находятся в&nbsp;надежных руках и&nbsp;могут в&nbsp;полной мере насладиться опытом без опасений.</p>
                   </div>
                 </li>
                 <li class="swiper-slide">

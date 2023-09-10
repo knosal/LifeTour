@@ -124,26 +124,14 @@
 
   &--elbrus {
     background: $tours-cards url('../../img/tours/elbrus-tours.jpg') 58% 0 / cover no-repeat;
-
-    @media (min-resolution: $retina-dppx) {
-      background: $tours-cards url('../../img/tours/elbrus-tours@2x.webp') 58% 0 / cover no-repeat;
-    }
   }
 
   &--altai {
     background: $tours-cards url('../../img/tours/altai-tours.jpg') 58% 0 / cover no-repeat;
-
-    @media (min-resolution: $retina-dppx) {
-      background: $tours-cards url('../../img/tours/altai-tours@2x.webp') 58% 0 / cover no-repeat;
-    }
   }
 
   &--adygea {
     background: $tours-cards url('../../img/tours/adygea-tours.jpg') 58% 0 / cover no-repeat;
-
-    @media (min-resolution: $retina-dppx) {
-      background: $tours-cards url('../../img/tours/adygea-tours@2x.webp') 58% 0 / cover no-repeat;
-    }
   }
 }
 
@@ -161,18 +149,6 @@
 
     font-size: 24px;
     line-height: 28px;
-
-    /*&::before {
-      content: '';
-      position: absolute;
-      bottom: -17px;
-      left: 0;
-
-      width: 80px;
-      height: 1px;
-
-      background-color: rgba($color-default-white, 0.2);
-    }*/
 
     @include vp-1199 {
       font-size: 24px;

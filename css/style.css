@@ -2957,21 +2957,6 @@ button,
   height: auto;
   color: #ffffff;
   background-color: rgba(2, 102, 193, 0.3);
-  background-position: 58% 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.tours__item--elbrus {
-  background-image: url("/img/tours/elbrus-tours.webp");
-}
-
-.tours__item--altai {
-  background-image: url("/img/tours/altai-tours.webp");
-}
-
-.tours__item--adygea {
-  background-image: url("/img/tours/adygea-tours.webp");
 }
 
 .tours__item::before {
@@ -2984,12 +2969,16 @@ button,
 }
 
 .tours__item picture {
-  z-index: -2;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  inset: 0;
 }
 
 .tours__item img {
   width: 380px;
-  height: 412px;
+  height: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
